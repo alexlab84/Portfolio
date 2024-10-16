@@ -1,0 +1,8 @@
+@import './core/reset';
+@import './core/variables';
+
+body {
+    font-family: $font;
+    background-image: url('../images/fondoPortfolio.jpg');
+}
+
