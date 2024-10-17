@@ -1,12 +1,13 @@
 function Header() {
     return (
       <header>
-        <nav>
-          <h1>Alejandrita's Things</h1>
-          <ul>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
+        <h1 className="principalTitle">Alejandra Sánchez</h1>
+        <nav className="navLinks">
+          
+          <ul className="ulLink"> 
+            <li className="linkLi"><a className="link" href="#about">Sobre mí</a></li>
+            <li className="linkLi"><a className="link" href="#projects">Proyectos</a></li>
+            <li className="linkLi"><a className="link" href="#contact">Contacto</a></li>
           </ul>
         </nav>
       </header>

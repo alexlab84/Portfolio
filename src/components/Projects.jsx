@@ -18,14 +18,14 @@ const projects = [
 
   function Projects() {
     return (
-      <section id="projects">
-        <h2>Proyectos</h2>
+      <section className="about">
+        <h2 className="secondTitle">Proyectos</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
               <img src={project.image} alt={project.title} />
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <p className="paragraph">{project.description}</p>
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">Demo en vivo</a>
             </div>

@@ -5,5 +5,113 @@ body {
     font-family: $font;
     background-image: url('../images/fondo3.jpg');
     background-size: contain;
+    
+}
+
+// Header
+
+.principalTitle {
+    font-size: 6rem;
+    color: $color;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        #ff6600,
+        #ffcc00,
+        #00ffff,
+        #0033ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 0.2rem transparent;
+}
+
+.linkLi {
+    list-style: none; 
+}
+.link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $color;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+    
+}
+
+.link:hover {
+    color: #ff6600; /* Cambiar el color al pasar el ratón */
+    transform: scale(1.1); /* Agrandar un poco */
+  }
+  
+  /* Underline effect on hover */
+  .link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ff6600;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .link:hover::after {
+    width: 100%; /* Subrayado animado */
+  }
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 3.5rem;
+    padding-top: 1rem;
+}
+
+.ulLink {
+    display: flex;
+    gap: 5rem; /* Separar los enlaces */
+}
+
+
+// About Me
+
+.about {
+    padding: 1.5rem 2rem;
+    color: $color;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    opacity: 0.7;
+    backdrop-filter: blur(5px); /* Desenfoque suave para hacer la imagen de fondo más difusa */
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    margin: 10rem auto;
+    max-width: 800px;
+}
+
+.secondTitle {
+    font-size: 2.5rem;
+    background: linear-gradient(
+      90deg,
+      #ff6600,
+      #ffcc00,
+      #00ffff,
+      #0033ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.paragraph {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
