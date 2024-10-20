@@ -21,7 +21,7 @@ const projects = [
   function Projects() {
     return (
      
-      <section className="about">
+      <section className="projects">
         <h2 className="secondTitle">Proyectos</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
