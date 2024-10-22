@@ -105,6 +105,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    text-align: center;
 }
 
 .paragraph {
@@ -121,7 +122,7 @@ body {
 }
 
 .projects {
-    ppadding: 1.5rem 2rem;
+    padding: 1.5rem 2rem;
     color: $color;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
     opacity: 0.7;
@@ -131,4 +132,15 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     margin: 10rem auto;
     max-width: 800px;
+}
+
+.projectsFlex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    
 }

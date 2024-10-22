@@ -1,5 +1,6 @@
 import meme from '../images/meme.png'
 import refran from '../images/refran.jpg'
+import cards from '../images/HarryPotter.png'
 
 const projects = [
     {
@@ -15,6 +16,12 @@ const projects = [
       githubLink: 'https://github.com/alexlab84/Generador-de-refranes-divertidos',
       liveDemo: 'https://alexlab84.github.io/Generador-de-refranes-divertidos/',
     },
+    {
+      title: 'Harry Potter Cards',
+      description: 'Aplicación que muestra personajes de Harry Potter y filtra',
+      image: cards,
+      liveDemo: 'https://alexlab84.github.io/HarryPotterCards/'
+    }
     // Añadir más proyectos aquí
   ];
 
@@ -23,13 +30,11 @@ const projects = [
      
       <section className="projects">
         <h2 className="secondTitle">Proyectos</h2>
-        <div className="projects-grid">
+        <div className="projectsFlex">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
               <h3>{project.title}</h3>
               <img src={project.image} alt={project.title} className='imageProyect'/>
-              <p className="paragraph">{project.description}</p>
-              
               <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">Demo en vivo</a>
             </div>
           ))}
