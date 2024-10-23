@@ -1,6 +1,6 @@
 function Contact() {
     return (
-      <section id="contact">
+      <section className="contact">
         <h2>Contacto</h2>
         <p>¡Estoy abierta a nuevas oportunidades! No dudes en contactarme.</p>
         <ul>
