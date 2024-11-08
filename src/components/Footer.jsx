@@ -1,7 +1,9 @@
 function Footer() {
     return (
-      <footer>
-        <p>&copy; 2024 Alejandra Sánchez</p>
+      <footer className="footer">
+        
+        <p className="">&copy; 2024 Alejandra Sánchez</p>
+        
       </footer>
     );
   }
