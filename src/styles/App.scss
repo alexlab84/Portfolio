@@ -4,8 +4,9 @@
 body {
     font-family: $font;
     background-image: url('../images/fondo3.jpg');
-    background-size: contain;
-    
+    background-size: cover; // Cambié a 'cover' para mejor visualización
+    background-attachment: fixed; // Para un efecto de parallax
+    margin: 0;
 }
 
 // Header
@@ -14,37 +15,32 @@ body {
     font-size: 6rem;
     color: $color;
     text-align: center;
-    background: linear-gradient(
-        90deg,
-        #ff6600,
-        #ffcc00,
-        #00ffff,
-        #0033ff
-    );
+    background: linear-gradient(90deg, #ff6600, #ffcc00, #00ffff, #0033ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-stroke: 0.2rem transparent;
+    margin-bottom: 20px; // Añadido espacio inferior
+    
 }
 
 .principalTitleh2 {
     font-size: 4rem;
     color: $color;
     text-align: center;
-    background: linear-gradient(
-        90deg,
-        #ff6600,
-        #ffcc00,
-        #00ffff,
-        #0033ff
-    );
+    background: linear-gradient(90deg, #ff6600, #ffcc00, #00ffff, #0033ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-stroke: 0.2rem transparent;
+    margin-bottom: 20px; // Añadido espacio inferior
 }
+
+
+
 
 .linkLi {
     list-style: none; 
 }
+
 .link {
     font-size: 1.5rem;
     font-weight: bold;
@@ -53,16 +49,14 @@ body {
     padding: 0.5rem 1rem;
     transition: color 0.3s, transform 0.3s;
     position: relative;
-    
 }
 
 .link:hover {
-    color: #ff6600; /* Cambiar el color al pasar el ratón */
-    transform: scale(1.1); /* Agrandar un poco */
-  }
-  
-  /* Underline effect on hover */
-  .link::after {
+    color: #ff6600; 
+    transform: scale(1.1); 
+}
+
+.link::after {
     content: "";
     display: block;
     width: 0;
@@ -73,11 +67,11 @@ body {
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .link:hover::after {
-    width: 100%; /* Subrayado animado */
-  }
+}
+
+.link:hover::after {
+    width: 100%;
+}
 
 .navLinks {
     display: flex;
@@ -90,38 +84,31 @@ body {
 
 .ulLink {
     display: flex;
-    gap: 5rem; /* Separar los enlaces */
+    gap: 5rem; 
 }
-
 
 // About Me
 
 .about {
     padding: 1.5rem 2rem;
     color: $color;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-    opacity: 0.7;
-    backdrop-filter: blur(5px); /* Desenfoque suave para hacer la imagen de fondo más difusa */
+    background-color: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px); // Aumentado el desenfoque
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Aumentada la sombra
     margin: 5rem auto;
     max-width: 800px;
 }
 
 .secondTitle {
     font-size: 2.5rem;
-    background: linear-gradient(
-      90deg,
-      #ff6600,
-      #ffcc00,
-      #00ffff,
-      #0033ff
-    );
+    background: linear-gradient(90deg, #ff6600, #ffcc00, #00ffff, #0033ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-align: center;
+    margin-bottom: 15px; // Añadido espacio inferior
 }
 
 .paragraph {
@@ -133,26 +120,24 @@ body {
     text-align: center;
 }
 
-.imageProyect {
-    width: 200px;
-    height: 200px;
-}
+// Proyectos
 
 .projects {
     padding: 1.5rem 2rem;
     color: $color;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-    opacity: 0.7;
-    backdrop-filter: blur(5px); /* Desenfoque suave para hacer la imagen de fondo más difusa */
+    background-color: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px);
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     margin: 5rem auto;
     max-width: 800px;
 }
 
 .projectsFlex {
     display: flex;
+    flex-wrap: wrap; // Para que se ajusten en pantallas más pequeñas
     justify-content: space-around;
+    
 }
 
 .project-card {
@@ -161,19 +146,18 @@ body {
     color: $color;
     font-size: 1.2rem;
     font-weight: bold;
-    color: $color;
-    
+    margin: 1rem; // Añadido margen para separación
 }
+
+// Contacto
 
 .contact {
     padding: 1.5rem 2rem;
     color: $color;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-    opacity: 0.7;
-    backdrop-filter: blur(5px); /* Desenfoque suave para hacer la imagen de fondo más difusa */
-    
+    background-color: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px);
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     margin: 5rem auto;
     max-width: 800px;
 }
@@ -181,6 +165,7 @@ body {
 .ulProjects {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; // Para que se ajusten en pantallas más pequeñas
 }
 
 .liProjects {
@@ -194,4 +179,100 @@ body {
     font-weight: bold;
     color: $color;
     padding-top: 20px;
+}
+
+// Media Queries
+
+@media (max-width: 768px) {
+    .principalTitle {
+        font-size: 4rem; // Disminuir tamaño en pantallas pequeñas
+    }
+
+    .principalTitleh2 {
+        font-size: 3rem; // Disminuir tamaño en pantallas pequeñas
+    }
+
+    .paragraph, .secondTitle {
+        font-size: 1.2rem; // Ajustar tamaño de texto
+    }
+
+    .about, .projects, .contact {
+        padding: 1rem; // Ajustar padding en secciones
+        margin: 2rem 1rem; // Reducir margen en pantallas pequeñas
+    }
+    
+    .project-card {
+        width: 90%; // Ajustar ancho de tarjeta de proyecto
+    }
+}
+
+.projects {
+    padding: 1.5rem 2rem;
+    color: $color;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 5rem auto;
+    max-width: 800px;
+}
+
+.projectsFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    color: $color;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem;
+    width: calc(33.33% - 2rem); /* Ajusta el tamaño de las tarjetas en pantallas grandes */
+    box-sizing: border-box;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto; /* Mantener la relación de aspecto de las imágenes */
+    margin-bottom: 10px; /* Ajusta el espacio debajo de la imagen */
+}
+
+.projectsTitle {
+    font-size: 1.5rem; /* Tamaño adecuado para el título */
+    margin-bottom: 5px; /* Reduce el espacio entre el título y la imagen */
+}
+
+.linkProjects {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $color;
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Las tarjetas de los proyectos ocupan todo el ancho en pantallas pequeñas */
+    }
+
+    .projectsTitle {
+        font-size: 1.3rem; /* Ajustar tamaño en pantallas pequeñas */
+        margin-bottom: 5px; /* Asegurarse de que el margen esté cerca */
+    }
+
+    .project-card img {
+        margin-bottom: 5px; /* Reducir el margen para que el título se acerque más a la imagen */
+    }
+}
+.project-card img {
+    width: 100%;
+    height: 200px; /* Altura común para todas las imágenes */
+    object-fit: contain; /* La imagen se ajusta sin recortes */
+    margin-bottom: 10px;
 }

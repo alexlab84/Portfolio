@@ -10,7 +10,7 @@ const projects = [
       liveDemo: 'https://alexlab84.github.io/Meme-Generator/',
     },
     {
-      title: 'Generador de refranes',
+      title: 'Proverb generator',
       description: 'Genera refranes divertidos de forma aleatoria.',
       image: refran,
       githubLink: 'https://github.com/alexlab84/Generador-de-refranes-divertidos',
@@ -33,7 +33,7 @@ const projects = [
         <div className="projectsFlex">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <h3>{project.title}</h3>
+              <h3 className='projectsTitle'>{project.title}</h3>
               <img src={project.image} alt={project.title} className='imageProyect'/>
               <a className="linkProjects" href={project.liveDemo} target="_blank" rel="noopener noreferrer">Demo en vivo</a>
             </div>

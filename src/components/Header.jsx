@@ -6,9 +6,11 @@ function Header({ setActiveSection }) {
   };
 
   return (
-    <header>
+    <header className='header'>
+      <div className='containerTitles'>
       <h1 className="principalTitle">Alejandra Sánchez</h1>
-      <h2 className="principalTitleh2">Frontend Developer</h2>
+      <h2 className="principalTitleh2">Fullstack Developer</h2>
+      </div>
       <nav className="navLinks">
         <ul className="ulLink"> 
           <li className="linkLi"><a className="link" onClick={() => handleSectionChange('projects')}>Proyectos</a></li>
