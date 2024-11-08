@@ -173,13 +173,7 @@ body {
     padding-top: 50px;
 }
 
-.linkProjects {
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: $color;
-    padding-top: 20px;
-}
+
 
 // Media Queries
 
@@ -246,13 +240,26 @@ body {
 }
 
 .linkProjects {
-    text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    color: $color;
-    padding-top: 20px;
+    color: #007bff; /* Cambiar a un color llamativo (puedes elegir otro si prefieres) */
     display: block;
     text-align: center;
+    font-family: 'Arial', sans-serif; /* Cambiar la fuente para darle un aspecto más de enlace */
+    padding: 5px 0; /* Añadir un poco de espacio alrededor del enlace */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animación suave para el cambio de color y tamaño */
+    
+}
+
+.linkProjects:hover {
+    color: #ff6600; /* Cambiar el color cuando el usuario pasa el ratón sobre el enlace */
+    text-decoration: underline; /* Añadir el subrayado solo cuando se pasa el ratón */
+    transform: scale(1.05); /* Añadir un pequeño efecto de aumento cuando el ratón está encima */
+}
+
+.linkProjects:focus {
+    outline: none; /* Quitar el borde cuando el enlace está enfocado */
+    box-shadow: 0 0 3px 2px #ff6600; /* Resaltar el enlace cuando está enfocado */
 }
 
 /* Media Queries */
@@ -276,3 +283,25 @@ body {
     object-fit: contain; /* La imagen se ajusta sin recortes */
     margin-bottom: 10px;
 }
+
+.project-description {
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: normal; /* Reducir el grosor de la fuente */
+  }
+  
+  .project-technologies {
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    
+    margin-top: 5px;
+    text-align: center;
+    font-weight: normal; /* Reducir el grosor de la fuente */
+  }
+  
+  .project-technologies strong {
+    font-weight: bold; /* Solo hacer el texto 'Tecnologías utilizadas' en negrita */
+  }
+  
