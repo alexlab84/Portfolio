@@ -7,6 +7,7 @@ body {
     background-size: cover; // Cambié a 'cover' para mejor visualización
     background-attachment: fixed; // Para un efecto de parallax
     margin: 0;
+    padding: 0;
 }
 
 // Header
@@ -54,6 +55,7 @@ body {
 .link:hover {
     color: #ff6600; 
     transform: scale(1.1); 
+    cursor: pointer;
 }
 
 .link::after {
@@ -307,3 +309,199 @@ body {
   .footer {
     text-align: center;
   }
+
+  /* Media Queries para móviles (máx. 768px) */
+@media (max-width: 768px) {
+    .principalTitle {
+        font-size: 3.5rem; /* Reducir el tamaño del título principal */
+        margin-bottom: 15px;
+    }
+
+    .principalTitleh2 {
+        font-size: 2.5rem; /* Reducir el tamaño del subtítulo */
+        margin-bottom: 15px;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Reducir el espacio entre los enlaces */
+        padding: 0;
+    }
+
+    .ulLink {
+        flex-direction: column;
+        gap: 1rem; /* Reducir el espacio entre los enlaces */
+    }
+
+    .link {
+        font-size: 1.2rem; /* Reducir el tamaño de los enlaces */
+        padding: 0.3rem 0.5rem; /* Reducir el padding de los enlaces */
+        text-align: center;
+    }
+
+    .about,
+    .projects,
+    .contact {
+        padding: 1rem; /* Reducir padding en secciones */
+        margin: 2rem auto; /* Centrar y ajustar el margen */
+        width: 90%; /* Ajustar el ancho para móviles */
+        max-width: 600px; /* Limitar el ancho máximo */
+    }
+
+    .paragraph,
+    .secondTitle {
+        font-size: 1rem; /* Reducir tamaño de texto */
+        line-height: 1.4;
+    }
+
+    .projectsFlex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .project-card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho en móviles */
+        margin: 1rem 0;
+    }
+
+    .project-card img {
+        height: auto; /* Ajustar altura de la imagen */
+        max-height: 150px; /* Limitar la altura máxima */
+    }
+
+    .projectsTitle {
+        font-size: 1.2rem; /* Reducir tamaño del título de proyecto */
+        margin-bottom: 10px;
+    }
+
+    .linkProjects {
+        font-size: 1rem; /* Reducir tamaño de los enlaces de proyectos */
+        padding: 0.3rem;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.9rem; /* Reducir tamaño del texto en el footer */
+    }
+}
+/* Media Queries para Tablet (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navLinks {
+        flex-direction: row; /* Enlaces alineados horizontalmente como en PC */
+        justify-content: center;
+        gap: 3rem; /* Espacio entre los enlaces */
+    }
+
+    .ulLink {
+        flex-direction: row;
+        gap: 3rem; /* Mantener espacio entre los enlaces */
+    }
+
+    .project-card {
+        width: calc(33.33% - 2rem); /* Ajuste para mantener 3 tarjetas por fila */
+    }
+
+    .projectsTitle {
+        text-align: center; /* Centrar el título del proyecto */
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Queries para Móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Reducir el espacio entre enlaces */
+    }
+
+    .ulLink {
+        flex-direction: column;
+        gap: 1rem; /* Enlaces en columna */
+    }
+
+    .link {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.5rem;
+        text-align: center;
+    }
+
+    .about,
+    .projects,
+    .contact {
+        padding: 1rem;
+        margin: 2rem auto;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .projectsFlex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .projectsTitle {
+        text-align: center; /* Centrar el título del proyecto */
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ajustes generales */
+.projectsTitle {
+    text-align: center; /* Aseguramos que el título esté centrado en todas las vistas */
+}
+
+.project-card {
+    text-align: center; /* Centrar el contenido de la tarjeta del proyecto */
+}
+/* Media Queries para Tablet (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navLinks {
+        flex-direction: row; /* Mostrar enlaces en línea */
+        justify-content: center; /* Centrar los enlaces horizontalmente */
+        align-items: center;
+        gap: 3rem; /* Espacio entre los enlaces */
+        padding-top: 1rem;
+    }
+
+    .ulLink {
+        display: flex; /* Aseguramos que esté en flex */
+        flex-direction: row; /* Alineamos los enlaces en una fila */
+        gap: 3rem; /* Espacio entre los enlaces */
+    }
+
+    .linkLi {
+        display: inline-block; /* Mostrar elementos de lista en línea */
+    }
+}
+/* Media Queries para Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .secondTitle {
+        font-size: 2rem; /* Aumentar el tamaño en móvil */
+    }
+
+    .projectsTitle {
+        font-size: 1.8rem; /* Aumentar el tamaño de los títulos de proyectos en móvil */
+    }
+}
+
+/* Media Queries para Tablet (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .secondTitle {
+        font-size: 2.5rem; /* Aumentar el tamaño en tablet */
+    }
+
+    .projectsTitle {
+        font-size: 2.2rem; /* Aumentar el tamaño de los títulos de proyectos en tablet */
+    }
+}
